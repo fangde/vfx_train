@@ -37,7 +37,7 @@ def train_input():
         print tsx.shape,tsy.shape
 
         tx=(tdx-128.0)/128.0
-        ty=(tdy-128.0)/128.0
+        ty=tdy/255.0
 
         tx=tx.astype(np.float32)
         ty=ty.astype(np.float32)

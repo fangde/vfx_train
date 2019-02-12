@@ -22,7 +22,7 @@ def StartTrain(rn):
 
     
 
-    batch = 1
+
     model = model_fun_seg(batch_size, grid_size, '/gpu:0', channel)
 
     runname = 'vfx_seg_test'+rn
@@ -30,7 +30,7 @@ def StartTrain(rn):
 
     data_g = train_input()
 
-    fit(model, data_g, batch_size=batch, runname=runname, sess=sess)
+    fit(model, data_g, batch_size=batch_size, runname=runname, sess=sess)
 
 
 if __name__ == '__main__':
