@@ -16,13 +16,13 @@ sess = tf.InteractiveSession()
 @click.option('--rn', prompt='the runname',
               help='the run name.')
 def StartTrain(rn):
-    batch_size = 1
+    batch_size = 8
     grid_size = 512
     channel = 16
 
     
 
-    batch = 1
+    batch = 8
     model = model_fun_seg(batch_size, grid_size, '/gpu:0', channel)
 
     runname = 'vfx_seg_test'+rn
