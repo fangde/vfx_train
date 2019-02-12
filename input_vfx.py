@@ -2,7 +2,7 @@ import numpy as np
 from scipy import ndimage
 
 def train_input():
-    fl=np.load('vfx_seg.npz')
+    fl=np.load('../vfx_seg.npz')
     tx=fl['tx']
     ty=fl['ty']
 
